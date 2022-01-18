@@ -81,7 +81,7 @@
                         <a href="service" class="nav-item nav-link">Service</a>
                         <a href="feature" class="nav-item nav-link">Feature</a>
                         {{-- <a href="advisor" class="nav-item nav-link">Advisor</a> --}}
-                        <a href="apply" class="nav-item nav-link">Apply</a> 
+                        <a href="" class="nav-item nav-link">Apply</a> 
                         {{-- <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu">
@@ -97,53 +97,14 @@
         <!-- Nav Bar End -->
         
    <!-- Contact Start -->
-   <div class="contact mt-5">
+   <div class="contact">
     <div class="container">
         <div class="section-header">
-            <p>Get In Touch</p>
-            <h2>Get In Touch For Any Query</h2>
+            <p class=" mt-5" >Send resume</p>
+            <h2>Submit your resume</h2>
         </div>
         <div class="row align-items-center">
-            <div class="col-md-5">
-                <div class="contact-info">
-                    <div class="contact-icon">
-                        {{-- <i class="fa fa-map-marker-alt"></i> --}}
-                        <img src="img/usa.png" alt="Icon" style="width: 20px; height:20px">  
-                    </div>
-                    <div class="contact-text">
-                        <h3>USA</h3>
-                        <p>+1 703-537-5081 </p>
-                           <p> Suite 101-22587 Armstrong Terrace </p>
-                           <P> Ashburn VA 20148</p>
-                    </div>
-                </div>
-                <div class="contact-info">
-                    <div class="contact-icon">
-                        {{-- <i class="fa fa-phone-alt"></i> --}}
-                        <img src="img/uk.png" alt="Icon" style="width: 20px; height:20px"> 
-                    </div>
-                    <div class="contact-text">
-                        <h3>United Kingdom</h3>
-                        <p>+44 113 328 0567 </p>
-                           <p> 40 West Grange Rd. </p>
-                           <P> Leeds, West Yorkshire
-                            LS10 3AW</p>
-                    </div>
-                </div>
-                <div class="contact-info">
-                    <div class="contact-icon">
-                        {{-- <i class="fa fa-envelope"></i> --}}
-                        <img src="img/canada.png" alt="Icon" style="width: 20px; height:20px"> 
-                    </div>
-                    <div class="contact-text">
-                        <h3>Canada</h3>
-                        <p>+ 1 703-537-5081 </p>
-                           <p> 106-12 Elm Grove Ave </p>
-                           <P> Toronto ON
-                            M6K 2J1</p>
-                    </div>
-                </div>
-            </div>
+        
             <div class="col-md-7">
                 <div class="contact-form">
                     @if ($errors->any())
@@ -166,7 +127,7 @@
                 </div>
                 @endif   
         
-                    <form  method="post" action="{{route('contact.store') }}" name="" id="" >
+                    <form  method="post" action="{{route('Apply.store') }}" name="" id="" enctype="multipart/form-data">
                         @csrf
                         <div class="control-group">
                             <input type="text" name="name" class="form-control" id="" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
@@ -179,16 +140,17 @@
                         <div class="control-group">
                             <input type="text" class="form-control" name="phone" id="" placeholder="your phone" required="required" data-validation-required-message="Please enter your phone">
                             <p class="help-block text-danger"></p>
+                        </div>                     
+                        
+
+                        <div class="form-group">
+                            <input type="file" name="file" placeholder="Choose file" id="file">
+                              @error('file')
+                              <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                              @enderror
                         </div>
-                        <div class="control-group">
-                            <input type="text" name="subject" class="form-control" id="" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="control-group">
-                            <textarea class="form-control" name="message" id="" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div>
+
+                        <div class="">
                             <button class="btn" type="submit"  value="" id="">Send Message</button>
                         </div>
                     </form>

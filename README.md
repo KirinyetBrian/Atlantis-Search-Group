@@ -22,16 +22,16 @@ We are involved in the hiring process long after your hire. We stay in contact w
 
 ## CONTACT US:
 
-(COUNTRY FLAG) USA +1 703-537-5081
+ USA +1 703-537-5081
 Suite 101-22587 Armstrong Terrace
 Ashburn VA 20148
 
-(COUNTRY FLAG) United Kingdom +44 113 328 0567
+ United Kingdom +44 113 328 0567
 40 West Grange Rd.
 Leeds, West Yorkshire
 LS10 3AW
 
-(COUNTRY FLAG) Canada + 1 703-537-5081
+ Canada + 1 703-537-5081
 106-12 Elm Grove Ave
 Toronto ON
 M6K 2J1

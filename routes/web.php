@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ContactUsFormController;
+use App\Http\Controllers\ApplyController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -54,3 +55,12 @@ Route::get('service', function () {
 Route::get('single', function () {
     return view('single');
 });
+
+Route::get('apply', function () {
+    return view('apply');
+});
+
+Route::get('/contact', [ContactUsFormController::class, 'createForm']);
+Route::post('/', [ContactUsFormController::class, 'ContactUsForm'])->name('contact.store');
+
+Route::resource('Apply',ApplyController::class);

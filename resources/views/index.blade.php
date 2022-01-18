@@ -32,7 +32,7 @@
         <div class="top-bar d-none d-md-block">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-12">
                         <div class="top-bar-left">
                             <div class="text">
                                 <i class="far fa-clock"></i>
@@ -41,9 +41,9 @@
                             </div>
                             <div class="text">
                                 <i class="fa fa-phone-alt"></i>
-                                <h2>USA  +1 703-537-5081 ,</h2>
-                                <h2>UK +44 113 328 0567 ,</h2>
-                                <h2>Canada + 1 703-537-5081</h2>
+                                <h2><img src="img/usa.png" alt="Icon" style="width: 20px; height:20px">+1703-537-5081,</h2>
+                                <h2> <img src="img/uk.png" alt="Icon" style="width: 20px; height:20px">+44-113-328-0567 ,</h2>
+                                <h2>  <img src="img/canada.png" alt="Icon" style="width: 20px; height:20px">+1703-537-5081</h2>
                                 <p>For Appointment</p>
                             </div>
                         </div>
@@ -81,7 +81,7 @@
                         <a href="service" class="nav-item nav-link">Service</a>
                         <a href="feature" class="nav-item nav-link">Feature</a>
                         {{-- <a href="advisor" class="nav-item nav-link">Advisor</a> --}}
-                        <a href="" class="nav-item nav-link">Apply</a> 
+                        <a href="apply" class="nav-item nav-link">Apply</a> 
                         {{-- <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu">
@@ -375,7 +375,7 @@
                                 <i class="fa fa-user"></i>
                                 <div class="counters-text">
                                     <h2 data-toggle="counter-up">100</h2>
-                                    <p>Our Staffs</p>
+                                    <p>Our Staff</p>
                                 </div>
                             </div>
                             <div class="col-6">
@@ -585,26 +585,50 @@
                     </div>
                     <div class="col-md-7">
                         <div class="contact-form">
-                            <div id="success"></div>
-                            <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                            @if ($errors->any())
+                            <div class="alert alert-danger">
+                              <ul>
+                                  @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                  @endforeach
+                              </ul>
+                            </div><br />
+                          @endif
+                          @if(Session::has('danger'))
+                          <div class="alert alert-danger text-center">
+                              {{Session::get('danger')}}
+                          </div>
+                        @endif   
+                        @if(Session::has('success'))
+                        <div class="alert alert-success text-center">
+                            {{Session::get('success')}}
+                        </div>
+                        @endif   
+                
+                            <form  method="post" action="{{route('contact.store') }}" name="" id="" >
+                                @csrf
                                 <div class="control-group">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
+                                    <input type="text" name="name" class="form-control" id="" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="control-group">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
+                                    <input type="email" name="email" class="form-control" id="" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="control-group">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
+                                    <input type="text" class="form-control" name="phone" id="" placeholder="your phone" required="required" data-validation-required-message="Please enter your phone">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="control-group">
-                                    <textarea class="form-control" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
+                                    <input type="text" name="subject" class="form-control" id="" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="control-group">
+                                    <textarea class="form-control" name="message" id="" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div>
-                                    <button class="btn" type="submit" id="sendMessageButton">Send Message</button>
+                                    <button class="btn" type="submit"  value="" id="">Send Message</button>
                                 </div>
                             </form>
                         </div>
@@ -704,7 +728,7 @@
                                         </i>+1703-537-5081,+441133280567, +1703-537-5081
                                     
                                     </p>
-                                    <p><i class="fa fa-envelope"></i>info@example.com</p>
+                                    <p><i class="fa fa-envelope"></i>Tumelo@atlantissearchgroup.com</p>
                                     <div class="footer-social">
                                         <a href=""><i class="fab fa-twitter"></i></a>
                                         <a href=""><i class="fab fa-facebook-f"></i></a>

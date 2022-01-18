@@ -41,9 +41,9 @@
                             </div>
                             <div class="text">
                                 <i class="fa fa-phone-alt"></i>
-                                <h2>USA  +1 703-537-5081 ,</h2>
-                                <h2>UK +44 113 328 0567 ,</h2>
-                                <h2>Canada + 1 703-537-5081</h2>
+                                <h2><img src="img/usa.png" alt="Icon" style="width: 20px; height:20px">+1703-537-5081,</h2>
+                                <h2> <img src="img/uk.png" alt="Icon" style="width: 20px; height:20px">+44-113-328-0567 ,</h2>
+                                <h2>  <img src="img/canada.png" alt="Icon" style="width: 20px; height:20px">+1703-537-5081</h2>
                                 <p>For Appointment</p>
                             </div>
                         </div>
@@ -81,7 +81,7 @@
                         <a href="service" class="nav-item nav-link">Service</a>
                         <a href="feature" class="nav-item nav-link">Feature</a>
                         {{-- <a href="advisor" class="nav-item nav-link">Advisor</a> --}}
-                        <a href="" class="nav-item nav-link">Apply</a> 
+                        <a href="apply" class="nav-item nav-link">Apply</a> 
                         {{-- <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu">
@@ -98,7 +98,7 @@
 
 
         <!-- Service Start -->
-        <div class="service">
+        <div class="service mt-5">
             <div class="container">
                 <div class="section-header">
                     <p>Services</p>
@@ -268,7 +268,7 @@
                                         </i>+1703-537-5081,+441133280567, +1703-537-5081
                                     
                                     </p>
-                                    <p><i class="fa fa-envelope"></i>info@example.com</p>
+                                    <p><i class="fa fa-envelope"></i>Tumelo@atlantissearchgroup.com</p>
                                     <div class="footer-social">
                                         <a href=""><i class="fab fa-twitter"></i></a>
                                         <a href=""><i class="fab fa-facebook-f"></i></a>
