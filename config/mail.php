@@ -5,7 +5,7 @@ return [
 
     'driver' => env('MAIL_DRIVER', 'smtp'),
     'host' => env('MAIL_HOST', 'smtpout.secureserver.net'),
-    'port' => env('MAIL_PORT',25),
+    'port' => env('MAIL_PORT',587),
     'from' => ['address' => 'tumelo@atlantissearchgroup.com', 'name' => 'Atlantis'],
     'encryption' => 'tls',
     'username' => env('MAIL_USERNAME'),

@@ -83,7 +83,7 @@ class ApplyController extends Controller
        
        function($message) use ($request, $name,$file, $path){
            $message->from('tumelo@atlantissearchgroup.com');
-           $message->to('kirinyetbrian@gmail.com', 'Atlantis')->subject($request->get('subject'));
+           $message->to('tumelo@atlantissearchgroup.com', 'Atlantis')->subject($request->get('subject'));
            $message->attach(public_path('/resume/'.$name));
        });
 
