@@ -201,7 +201,7 @@
 
                             <!-- Consent checkbox -->
                             <div class="control-group form-check mt-3">
-                                <input type="checkbox" class="form-check-input" id="consentCheckbox" required>
+                                <input type="checkbox" class="form-check-input" id="consentCheckbox" required="required">
                                 <label class="form-check-label" for="consentCheckbox">
                                     By checking submit you give consent to Atlantis Search Group to contact you
                                     through SMS or Email.
