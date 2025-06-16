@@ -201,20 +201,28 @@
 
                             <!-- Consent checkbox -->
                             <div class="control-group form-check mt-3">
-                                <input type="checkbox" class="form-check-input" id="consentCheckbox" required="required">
+                                <input type="checkbox" class="form-check-input" id="consentCheckbox"
+                                    required="required">
                                 <label class="form-check-label" for="consentCheckbox">
-                                    By submitting this form and entering your phone number above,you agree to receive automated text messages from Atlantis Search Group. Message frequency varies. Message and data rates may apply.
+                                    By submitting this form and entering your phone number above, you agree to receive
+                                    automated text messages from Atlantis Search Group and agree to our
+                                    <a href="#" target="_blank"
+                                        rel="noopener noreferrer">Terms and Privacy</a>.
+                                    Consent is not a condition of any purchase. Msg frequency varies. Msg and data rates
+                                    may apply. Reply HELP for help and STOP to cancel. *
                                 </label>
                             </div>
 
-                            <div>
-                                <button class="btn" type="submit" value="" id="">Send Message</button>
-                            </div>
-                        </form>
                     </div>
+
+                    <div>
+                        <button class="btn" type="submit" value="" id="">Send Message</button>
+                    </div>
+                    </form>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <!-- Contact End -->
 
