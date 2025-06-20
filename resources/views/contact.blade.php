@@ -207,7 +207,7 @@
                                     automated text messages from Atlantis Search Group and agree to our
                                     <a href="#" target="_blank"
                                         rel="noopener noreferrer">Terms and Privacy</a>.
-                                    may apply. Reply HELP for help and STOP to cancel. *
+                                   Message and data rates may apply.You will only receive 2 SMS messages per month with updates on your profile with us. Reply HELP for help and STOP to cancel. *
                                 </label>
                             </div>
 
